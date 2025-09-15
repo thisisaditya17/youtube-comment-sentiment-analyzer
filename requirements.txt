@@ -1,0 +1,9 @@
+re
+pandas
+google-api-python-client
+python-dotenv
+joblib
+xgboost
+spacy
+flask
+flask-cors
