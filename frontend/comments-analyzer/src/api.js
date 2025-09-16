@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://127.0.0.1:5000';
+const API_BASE_URL = 'https://youtube-comment-sentiment-analyzer-ybe5.onrender.com';
 
 export const analyzeComments = async (youtubeLink) => {
   try {
