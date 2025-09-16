@@ -2,6 +2,10 @@
 
 A full-stack web application that analyzes sentiment in YouTube video comments using machine learning. Built with React frontend, Flask API backend, and XGBoost classifier trained on IMDB reviews achieving 85% accuracy.
 
+## 📂 Dataset Access
+
+You can download the dataset used for this project from [Kaggle: IMDB Dataset of 50K Movie Reviews](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews).
+
 ## 🎯 Project Overview
 
 This system extracts YouTube video comments and provides real-time sentiment analysis, helping content creators understand audience reactions. The model processes up to 1,000 comments per video and identifies the most confident positive and negative feedback.
