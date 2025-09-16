@@ -1,29 +1,26 @@
-# Use the official Python image as the base image
+# Use Python 3.12 explicitly  
 FROM python:3.12-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+ENV PIP_NO_CACHE_DIR=1
 
-# Set the working directory to the project root
+# Set the working directory
 WORKDIR /app
 
-# Install system dependencies for building packages
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
-    build-essential \
-    gcc \
-    g++ \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for better caching
 COPY requirements.txt .
 
-# Install Python dependencies
-RUN pip install --no-cache-dir --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Download spaCy model
-RUN python -m spacy download en_core_web_sm
+# Install Python dependencies with precompiled wheels only
+RUN pip install --upgrade pip setuptools wheel
+RUN pip install --only-binary=all --find-links https://download.pytorch.org/whl/cpu torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+RUN pip install --only-binary=all -r requirements.txt
 
 # Copy the entire project
 COPY . .
