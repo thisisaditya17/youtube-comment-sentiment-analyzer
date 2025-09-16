@@ -1,4 +1,4 @@
-# 🎬 YouTube Sentiment Analyzer
+# 🎬 YouTube Comments Sentiment Analyzer
 
 A full-stack web application that analyzes sentiment in YouTube video comments using machine learning. Built with React frontend, Flask API backend, and XGBoost classifier trained on IMDB reviews achieving 85% accuracy.
 
