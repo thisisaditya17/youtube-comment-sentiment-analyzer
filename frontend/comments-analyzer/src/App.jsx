@@ -27,7 +27,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 py-10 px-2">
       <div className="max-w-5xl mx-auto bg-white/80 rounded-3xl shadow-2xl p-8 backdrop-blur-md">
         <h1 className="text-5xl font-extrabold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 drop-shadow-lg">
-          YouTube Sentiment Analysis
+          YouTube Comments Sentiment Analysis
         </h1>
         
         <div className="flex flex-col items-center mb-8">
