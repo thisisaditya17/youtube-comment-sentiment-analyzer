@@ -1,5 +1,5 @@
 {
-  "name": "youtube-comments-analyzer",
+  "name": "comments-analyzer",
   "private": true,
   "version": "0.0.0",
   "type": "module",
