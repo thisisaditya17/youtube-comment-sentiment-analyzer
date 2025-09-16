@@ -2,6 +2,7 @@ import { useState } from 'react';
 import InputForm from './InputForm';
 import SentimentChart from './SentimentChart';
 import { analyzeComments } from './api';
+import LimitationsNotice from './LimitationsNotice';
 
 function App() {
   const [analysisData, setAnalysisData] = useState(null);
@@ -32,6 +33,8 @@ function App() {
         <div className="flex flex-col items-center mb-8">
           <InputForm onAnalyze={handleAnalyze} loading={loading} />
         </div>
+
+         <LimitationsNotice />
         
         {error && (
           <div className="bg-red-200 border border-red-400 text-red-800 px-6 py-4 rounded-xl mb-6 text-lg font-medium shadow">
